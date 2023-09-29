@@ -6,5 +6,39 @@
  
 <body>
     <h1>Author entry Krishna Vasanthi Yakkala</h1>
+    <form>
+        <label for="hidden_author">The hidden author name</label>
+        <input type="password" id="hidden_author" value="Dickens">
+        <br>
+        <label for="guess">Guess the author</label>
+        <input type="text" id="guess">
+        <br>
+        <br>
+        <input type="button" onclick="checkAuthor()" value="Check the guess">
+      </form>
+      
+      <p id="result">This text will be replaced with count</p>
+      
+      <script> 
+        var good=0;
+        var oops=0;
+        function checkAuthor(){
+            console.log("Getting form values")
+            hidden_author = document.getElementById("hidden_author").value
+            guess = document.getElementById("guess").value
+            
+            out = document.getElementById("result")
+            if(hidden_author == guess){
+                good++
+                alert("You got it right");
+                out.innerHTML = "Good Count: " + good
+            } else {
+                oops++
+                alert("Sorry");
+                out.innerHTML = "Bad Count: "+ oops
+            }
+        }
+      </script>
+    
 </body>
 </html> 
