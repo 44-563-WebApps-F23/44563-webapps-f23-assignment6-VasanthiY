@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tips Page</title>
+    </head>
+    <body>
+        <h1>Krishna Vasanthi Yakkala shows tip amounts</h1>
+        <form>
+            <label for="base_element">Enter base amount</label>
+            <input type ="number" id="base_element" value=50> <br>
+            <label for="conversion_element">Enter the tip percent</label>
+            <input type ="number" id="conversion_element" value=15> <br>
+            <input type="button" onclick="tips()" value="Show tip ">
+        </form>
+        <p id="result">Our results from tips</p>
+        <script>
+            function tips(){
+                baseAmount = document.getElementById("base_element").value
+                tip = Number(document.getElementById("conversion_element").value)
+                let myOutput = ""
+                
+                for(let i=0; i<=16; i=i+4) {
+                    let tipAmount = tip + i;
+                    let amount = baseAmount * tipAmount/100;
+                    myOutput += tipAmount +"% is " + amount + "; "
+                }
+                
+                out = document.getElementById("result");
+                out.innerHTML = "Tip are: " + myOutput
+            
+            }
+        </script>
+    </body>
+</html> 
