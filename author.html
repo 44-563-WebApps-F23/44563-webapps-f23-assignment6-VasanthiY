@@ -36,7 +36,15 @@
                 oops++
                 alert("Sorry");
                 out.innerHTML = "Bad Count: "+ oops
+
+                if(oops > 7) {
+                    incorrectGuesses()
+                }
             }
+        }
+
+        function incorrectGuesses(){
+            alert("Sorry, ran out of guesses.");
         }
       </script>
       
