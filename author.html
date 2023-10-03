@@ -2,16 +2,25 @@
 <html>
     <head>
         <title>Author Page</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     </head>
  
 <body>
     <h1>Author entry Krishna Vasanthi Yakkala</h1>
     <form>
         <label for="hidden_author">The hidden author name</label>
-        <input type="password" id="hidden_author" value="Dickens">
+        <input type="password" class="form-control-sm" id="hidden_author" value="Dickens">
         <br>
         <label for="guess">Guess the author</label>
-        <input type="text" id="guess">
+        <input type="text" class="form-control-sm" id="guess">
         <br>
         <br>
         <input type="button" onclick="checkAuthor()" value="Check the guess">
@@ -49,7 +58,7 @@
       </script>
       
       <div class="container">
-        <img src="Yakima.jpg" alt="Yakima" id="imageSrc" style="height: 100px;width: 100px;" onclick="selectImage()"> 
+        <img src="Yakima.jpg" class="rounded" alt="Yakima" id="imageSrc" style="height: 100px;width: 100px;" onclick="selectImage()"> 
         <script>
             let useImage = 1;
             function selectImage(){
